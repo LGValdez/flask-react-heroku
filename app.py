@@ -1,17 +1,12 @@
 from flask import Flask
 from flask.helpers import send_from_directory
 from flask_cors import CORS, cross_origin
+from api.api import api
 
 app = Flask(__name__, static_folder='frontend/build', static_url_path='')
 CORS(app)
 
-
-@app.route('/api', methods=['GET'])
-@cross_origin()
-def index():
-    return {
-        "base": "Flask React with Heroku"
-    }
+app.register_blueprint(api, url_prefix='/api')
 
 
 @app.route('/')
