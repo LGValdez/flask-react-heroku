@@ -12,10 +12,10 @@ export const Home = () => {
                 return response.json()
             }
         }).then(data => setState(data))
-            .then(error => console.log(error))
+            .then(error => error)
     }, [])
 
-    return <div class="main">
+    return <div className="content">
         <h2>About Me</h2>
         {(typeof state.info === 'undefined') ? (
             <p>Loading...</p>

@@ -8,24 +8,24 @@ import { Home } from '../Home/Home';
 import { Projects } from '../Projects/Projects';
 import { Contact } from '../Contact/Contact';
 
-function Navigation({props}) {
+function Navigation({ props }) {
 
   return (
     <Router>
-        <div>
-        <nav class="main-nav">
-            <ul>
+      <div>
+        <nav className="main-nav">
+          <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-            </ul>
+          </ul>
         </nav>
-        </div>
-        <Switch>
-            <Route exact path="/projects" render={() => <Projects />} />
-            <Route exact path="/contact" render={() => <Contact />} />
-            <Route exact path="/" render={() => <Home />} />
-        </Switch>
+      </div>
+      <Switch>
+        <Route exact path="/projects" render={() => <Projects />} />
+        <Route exact path="/contact" render={() => <Contact />} />
+        <Route exact path="/" render={() => <Home />} />
+      </Switch>
     </Router>
   );
 }

@@ -65,3 +65,34 @@
   background-color: rgba(4, 81, 247, 0.788);
   color: white;
 }
+
+.content {
+  padding: 3em;
+  text-align: justify;
+}
+
+.project-item-list {
+  width: 48%;
+  float: left;
+}
+
+.item-description {
+  width: 48%;
+  float: right;
+}
+
+.project-item {
+  margin-top: 1em;
+  padding: .5em;
+  border: 1px solid;
+}
+
+.project-item-description ul {
+  margin: 0;
+}
+
+.project-item-description li {
+  display: inline;
+  padding-top: 0;
+  padding: 0.5em 5% 0.5em 5%;
+}
