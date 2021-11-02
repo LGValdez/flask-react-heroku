@@ -1,6 +1,10 @@
 from flask import jsonify
+from ..api import api
+from flask_cors import cross_origin
 
 
+@api.route('/projects', methods=['GET'])
+@cross_origin()
 def get_projects(params=None):
     params = params or {}
     projects = [

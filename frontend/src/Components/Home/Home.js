@@ -7,7 +7,7 @@ export const Home = () => {
     const [state, setState] = useState({})
 
     useEffect(() => {
-        fetch("/api/me").then(response => {
+        fetch("/api/me/1").then(response => {
             if (response.status === 200) {
                 return response.json()
             }
@@ -16,13 +16,16 @@ export const Home = () => {
     }, [])
 
     return <div className="content">
-        <h2>About Me</h2>
-        {(typeof state.info === 'undefined') ? (
-            <p>Loading...</p>
+        {(typeof state.about === 'undefined') ? (
+            <div>
+                <h2>About Me</h2>
+                <p>Loading...</p>
+            </div>
         ) : (
-            state.info.map((info, i) => (
-                <p key={i}>{info}</p>
-            ))
+            <div>
+                <h2>About Me - {state.name}</h2>
+                <p>{state.about}</p>
+            </div>
         )}
     </div>
 }
