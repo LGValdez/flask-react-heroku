@@ -1,4 +1,4 @@
-from app.app import db
+from flask_app.app import db
 
 
 class User(db.Model):

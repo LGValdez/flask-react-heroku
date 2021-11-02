@@ -1,4 +1,4 @@
-from app.app import app, db
+from flask_app.app import app, db
 from api.api import api
 from flask_migrate import Migrate
 import os
