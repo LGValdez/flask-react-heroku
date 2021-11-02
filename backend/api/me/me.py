@@ -22,7 +22,7 @@ def about_me():
         return jsonify(results)
 
     if request.method == 'POST':
-        User.create(request.args)
+        User.create(request.values)
         return Response(status=200)
 
 

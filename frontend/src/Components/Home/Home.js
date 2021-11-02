@@ -24,7 +24,9 @@ export const Home = () => {
         ) : (
             <div>
                 <h2>About Me - {state.name}</h2>
-                <p>{state.about}</p>
+                {state.about.split("\n").map((parr) => {
+                    return <p>{parr}</p>
+                })}
             </div>
         )}
     </div>

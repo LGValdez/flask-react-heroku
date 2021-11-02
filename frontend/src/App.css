@@ -39,7 +39,7 @@
 
 .main-nav {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: lighter;
   background-color: black;
   border-bottom: 1px solid black;
@@ -56,7 +56,7 @@
 
 .main-nav a {
   display: inline-block;
-  padding: 0.5em 5% 0.5em 5%;
+  padding: 0.3em 3% 0.3em 3%;
   color: whitesmoke;
   text-decoration: none;
 }
@@ -69,6 +69,17 @@
 .content {
   padding: 3em;
   text-align: justify;
+}
+
+.float-left {
+  width: 48%;
+  float: left;
+}
+
+.float-right {
+  width: 48%;
+  float: right;
+  text-align: center;
 }
 
 .project-item-list {

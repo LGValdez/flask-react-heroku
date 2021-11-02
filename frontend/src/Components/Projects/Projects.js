@@ -10,11 +10,18 @@ export const Projects = () => {
     const [currentProject, setCurrentProject] = useState({})
 
     useEffect(() => {
-        axios.get("/api/projects").then(response => {
-            setState({ 'projects': response.data })
-        }
-        )
-    }, [])
+        const interval = setInterval(()=>{
+            axios.get("/api/me/1/projects").then(response => {
+                if (currentProject.id) {
+                    const project = response.data.find(x => x.id === currentProject.id)
+                    setCurrentProject(project)
+                }
+                setState({ 'projects': response.data })
+            }
+            )
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [currentProject])
 
     return <div className="content">
         <div className="project-item-list">

@@ -14,12 +14,13 @@ export const TechnologiesList = ({ technologies }) => {
         if (tech === 'Django') { return <img src="/technologies/django.png" alt="" width="64" /> }
         if (tech === 'ReactJS') { return <img src="/technologies/react.png" alt="" width="64" /> }
         if (tech === 'VSCode') { return <img src="/technologies/vscode.png" alt="" width="64" /> }
+        if (tech === 'Git') { return <img src="/technologies/git.png" alt="" width="64" /> }
     }
 
     return <ul>
         {technologies.map((tech, id) => (
             <li key={id}>
-                {getImage(tech)}
+                {getImage(tech.name)}
             </li>
         ))}
     </ul>
